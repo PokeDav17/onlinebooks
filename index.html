@@ -36,17 +36,6 @@
         footer {
             text-align: right;
         }
-
-        /* Style for the password input and error message */
-        .password-section {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .error-message {
-            color: red;
-            font-weight: bold;
-        }
     </style>
     <script>
         // Disable right-click
@@ -61,45 +50,25 @@
     </header>
 
     <main>
-        <!-- Password Section -->
-        <div class="password-section">
-            <label for="password">Enter Password: </label>
-            <input type="password" id="password" name="password">
-            <button onclick="checkPassword()">Submit</button>
-            <p id="error-message" class="error-message"></p>
-        </div>
-
-        <!-- Download Section (hidden initially) -->
-        <div class="download-section" style="display: none;">
-            <!-- Updated link with Google Drive link -->
-            <a href="https://drive.google.com/u/0/uc?id=1cgHOBJTnu6r2wgTRtmfaJTPay8SwGHHk&export=download" class="download-link" download>Download Sample Ebook</a>
-
+        <!-- Download Section -->
+        <div class="download-section">
             <!-- New buttons -->
-            <a href="https://drive.google.com/u/0/uc?id=1yXMTObj2xCvAUOP_av8Y2aMJ3OZB0u0y&export=download" class="download-link" download>Cleopatra</a>
+            <a href="https://drive.google.com/u/0/uc?id=1ma-2uXDmI7HiPwCc95DVDXCUilE-pxvU&export=download" class="download-link" download>A Summoner Awakens: Origins</a>
 
-            <a href="#" class="download-link" download>Blank</a> <!-- Add your link for the "blank" button or replace '#' with your desired link -->
+            <a href="https://drive.google.com/u/0/uc?id=1f1wq1nv0VmplbP8BMja2L1njcxpp_ijn&export=download" class="download-link" download>Anomalya</a>
+
+            <a href="https://drive.google.com/u/0/uc?id=1aUp5Wm1wRP3EyCiHesfIk-9UbLab7jYx&export=download" class="download-link" download>Astrobufale</a>
+
+            <a href="https://drive.google.com/u/0/uc?id=1dEknGO8khwejt5cL4L0vyU0pqRojIoT_&export=download" class="download-link" download>Cleopatra, la Regina che sfidò Roma</a>
+
+            <a href="https://drive.google.com/u/0/uc?id=14y8-FMFntEZ7g_7QVoABDOE7rS00Ul_p&export=download" class="download-link" download>Dieci cose che ho imparato</a>
+
+            <a href="https://drive.google.com/u/0/uc?id=1ZWulO_uDt0Mn3bOxHodGup2TTsLcItsI&export=download" class="download-link" download>La Regola dei 5 secondi</a>
         </div>
     </main>
 
     <footer>
         <p style="margin-right: 10px;">Personal Site for downloading ebooks. DC</p>
     </footer>
-
-    <script>
-        function checkPassword() {
-            var password = document.getElementById("password").value;
-            var errorMessage = document.getElementById("error-message");
-            var downloadSection = document.querySelector(".download-section");
-
-            // Replace 'decal' with your actual password
-            if (password === "decal") {
-                errorMessage.textContent = "";
-                downloadSection.style.display = "block"; // Show the download section
-            } else {
-                errorMessage.textContent = "Incorrect password. Please try again.";
-                downloadSection.style.display = "none"; // Hide the download section
-            }
-        }
-    </script>
 </body>
 </html>
