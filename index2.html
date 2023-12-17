@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace these values with your actual credentials
+            var validUsername = "your_username";
+            var validPassword = "your_password";
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to the specified URL if credentials are correct
+                window.location.href = "https://pokedav17.github.io/onlinebooks";
+            } else {
+                // Display an error message
+                document.getElementById("error-message").innerText = "Invalid username or password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <br>
+
+        <button type="button" onclick="validateLogin()">Login</button>
+    </form>
+
+    <p id="error-message" style="color: red;"></p>
+</body>
+</html>
