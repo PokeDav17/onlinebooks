@@ -6,32 +6,20 @@
     <title>Download an Ebook</title>
 
         <script>
-    // Array of allowed IP addresses
-    var allowedIPs = ['151.47.167.215']; // Replace with your allowed IP addresses
-
-    // Function to check if the user's IP is allowed
-    function isIPAllowed() {
-        // Get the user's IP address
-        fetch('https://api64.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                var userIP = data.ip;
-                console.log('User IP:', userIP);
-
-                // Check if the user's IP is in the allowed list
-                if (!allowedIPs.includes(userIP)) {
-                    // Redirect or show an error message
-                    console.error('Access Denied. Redirecting...');
-                   window.location.href = 'https://google.com'; // Replace with your URL
-                } else {
-                    console.log('Access Granted. Proceeding...');
-                }
-            })
-            .catch(error => console.error('Error fetching IP:', error));
+    var isKindle = /Kindle|Silk/.test(navigator.userAgent);
+    
+    if (isKindle) {
+        // Code specific to Amazon Kindle
+        console.log("This is an Amazon Kindle device.");
+        
+        // Your Kindle-specific code goes here
+    } else {
+        // Code for other devices
+	     window.location.href = "https://google.com";
+        console.log("This is not an Amazon Kindle device.");
+        
+        // Your non-Kindle code goes here
     }
-
-    // Call the function on page load
-    window.onload = isIPAllowed;
 </script>
 
 <style>
