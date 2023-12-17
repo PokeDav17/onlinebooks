@@ -79,6 +79,22 @@
                     console.error("Error signing out:", error.message);
                 });
         }
+	    // Function to toggle visibility of download section based on login state
+        function toggleDownloadSection(user) {
+            const downloadSection = document.querySelector('.download-section');
+            if (user) {
+                // User is logged in, show the download section
+                downloadSection.style.display = 'block';
+            } else {
+                // User is logged out, hide the download section
+                downloadSection.style.display = 'none';
+            }
+        }
+
+        // Listen for changes in the user's login state
+        onAuthStateChanged(auth, (user) => {
+            toggleDownloadSection(user);
+        });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
