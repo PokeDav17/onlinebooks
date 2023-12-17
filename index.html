@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download an Ebook</title>
 
-        <script>
-    var isKindle = /Kindle|Silk/.test(navigator.userAgent);
-    
-    if (isKindle) {
-        // Code specific to Amazon Kindle
-        console.log("This is an Amazon Kindle device.");
-        
-        // Your Kindle-specific code goes here
-    } else {
-        // Code for other devices
-	     window.location.href = "https://google.com";
-        console.log("This is not an Amazon Kindle device.");
-        
-        // Your non-Kindle code goes here
-    }
-</script>
+	
+    <script>
+        // Get the screen resolution
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
+
+        // Check if the resolution matches your criteria
+        if (screenWidth === 1448 && screenHeight === 1072) {
+            // Redirect to the desired page for the specified resolution
+            window.location.href = "https://google.com";
+        } else {
+            // Display a message or redirect to a different page
+            window.location.href = "https://google.com";
+        }
+    </script>
 
 <style>
         /* Your existing styles remain unchanged */
