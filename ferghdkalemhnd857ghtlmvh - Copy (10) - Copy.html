@@ -8,19 +8,38 @@
 
 	
 
-<style>
-        /* Your existing styles remain unchanged */
 
+    <style>
         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
             background-color: #333; /* Black background */
             color: #fff; /* Darker white text */
         }
 
-        /* New styles for the download section */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
         .download-section {
             margin-top: 40px;
-		text-align: center; /* Center-align the buttons */
-		
+            text-align: center;
         }
 
         .download-link {
@@ -31,7 +50,7 @@
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
-            margin-bottom: 15px; /* Increased margin between buttons */
+            margin: 0 10px 15px 10px; /* Adjust the margin for better spacing */
             border: 2px solid #000033; /* Even darker blue border (hover color) */
             transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
         }
@@ -48,35 +67,19 @@
             color: #000; /* Black text on click */
         }
 
-        /* Center the title */
-        h1 {
+        .divider {
+            margin: 20px 0;
             text-align: center;
+            color: #000066; /* Darker blue */
+            font-size: 24px;
+            border-bottom: 2px solid #000066; /* Darker blue border */
         }
 
-        /* Align the text to the right in the footer */
-        footer {
-            text-align: right;
+        @media (max-width: 600px) {
+            .container {
+                max-width: 100%;
+            }
         }
-
-        /* Divider style */
-             
-.divider {
-        margin: 20px 0;
-        text-align: center;
-        color: #333;
-        font-size: 24px; /* Adjust the font size as needed */
-    }
-
-   
-
-
-
-}
-
-    }
-
-
-        
     </style>
     <script>
         // Disable right-click
